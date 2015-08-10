@@ -1,0 +1,82 @@
+body{
+	background-image: url('image/bg.jpg');
+	background-repeat: repeat-x;
+	margin: 0 0 0 0;
+	font-family: "Segoe UI";}
+header h1{
+	font-size: 12pt;
+	color: #002e68;
+	margin-left: 100px;
+	margin-top: -30px;}
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: #005368;
+	font-family: }
+nav ul {padding: 5px 0 0 0; }
+nav ul li { display: inline; float: left; width:200px; text-align: center; border-right: 1px solid #fff}
+nav li ul { display: none; width:145px; }
+nav ul li a { display: block; background: #005368;	; padding: 10px;
+text-decoration: none; color: #fff;}
+nav ul li ul li a { display: block; background: #005368;	; padding: 10px;
+text-decoration: none; color: #fff; text-align: left}
+nav ul li a:hover { background: #002e68; cursor: pointer;}
+nav li:hover ul { display: block; cursor: pointer;position: absolute}
+nav li:hover a { background: #005368; cursor: pointer;}
+nav li:hover li a:hover { background: #002e68; cursor: pointer;border: 1px solid;}
+#recado{
+	width: 95%;
+	height: 300px;
+	border-left: 5px solid #005368;
+	border-right: 5px solid #005368;
+	border-radius: 20px;
+	margin: auto;
+	margin-top: 20px;
+	padding: 0;
+	background-color: transparent;}
+#recado h2{
+	font-weight: bold;
+	margin-left: 20px;
+	margin-top: 0;
+	font-size: 12pt;}
+
+input{
+	padding-left: 5px;
+	height: 40px;
+	width: 400px;
+	border-radius: 5px;
+	border: 1px solid #002e68;
+}
+button{
+	width: 110px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #005368;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	background-color: #002e68;
+}
+button:hover{
+	width: 110px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #002e68;
+	cursor: pointer;
+	background-color: #005368;
+	font-weight: bold;
+}
+form{
+	margin-left: 60px;
+	color: #002e68;
+}
+
+.atributo-form{
+	font-weight: bold;
+}
+
+.dados{
+	border-top: 1px solid #002e68;
+	padding: 10px;
+	margin-right: 20px;
+}

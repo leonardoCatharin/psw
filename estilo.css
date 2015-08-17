@@ -1,4 +1,4 @@
-body{
+	body{
 	background-image: url('image/bg.jpg');
 	background-repeat: repeat-x;
 	margin: 0 0 0 0;
@@ -40,7 +40,7 @@ nav li:hover li a:hover { background: #002e68; cursor: pointer;border: 1px solid
 	margin-top: 0;
 	font-size: 12pt;}
 
-input{
+.input-dados{
 	padding-left: 5px;
 	height: 40px;
 	width: 400px;
@@ -79,4 +79,36 @@ form{
 	border-top: 1px solid #002e68;
 	padding: 10px;
 	margin-right: 20px;
+}
+
+.img-home{
+	height:50px;
+	width:100px;
+}
+.img-home:hover{
+	color: #005368;
+}
+.img-home img{
+	margin-left: -10px;
+	height:50px;
+	width:50px;	
+}
+
+.area-texto{
+	width: 835px;
+	height: 100px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: 1px solid #002e68;
+}
+.dados-adicionais-check{
+	width: 20px;
+	height: 20px;
+	margin-left: 0;
+	margin-left: 0;
+	padding: 0;
+}
+.text-checkbox{
+vertical-align: top;
+margin-right: 48px;
 }

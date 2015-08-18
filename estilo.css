@@ -112,3 +112,23 @@ form{
 vertical-align: top;
 margin-right: 48px;
 }
+.login{
+	overflow: hidden;
+	width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	border: 2px solid #002e68;
+	border-radius: 15px;
+}
+.image-login{
+	width: 190px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.form-login{
+	width: 457px;
+	margin-left: auto;
+	margin-right: auto; 
+}

@@ -29,6 +29,11 @@ function getData(){
     'tipoconsulta': [
       {horario: '60 minutos', valor: 'Primeira consulta'},
       {horario: '30 minutos', valor: 'Consulta de retorno'},
-    ]
+    ],
+    hasMedico: function(name){
+      return this.medico.filter(function(item){
+        return name == item.name;
+      })
+    }
   }
 }

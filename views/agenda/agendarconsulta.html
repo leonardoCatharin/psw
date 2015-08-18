@@ -8,84 +8,64 @@
 </head>
 <body>
 	<header>
-	<img src="../../image/logo.png" height="100px">
-	<h1>PSW - CLÍNICA</h1>
+		<img src="../../image/logo.png" height="100px">
+		<h1>PSW - CLÍNICA</h1>
 	</header>
 	<nav>
-	<ul id="drop-menu">
-		<li class="img-home"><a href="../../index.html"><img class="img-home" src="../../icon/home.png">
-		<li><a>Cadastros</a>
-			<ul>
-				<li><a href="./paciente.html">Paciente</a></li>
-				<li><a href="./medico.html">Médico</a></li>
-				<li><a href="./secretaria.html">Secretária</a></li>
+		<ul id="drop-menu">
+			<li class="img-home"><a href="../../index.html"><img class="img-home" src="../../icon/home.png">
+				<li><a>Cadastros</a>
+					<ul>
+						<li><a href="./paciente.html">Paciente</a></li>
+						<li><a href="./medico.html">Médico</a></li>
+						<li><a href="./secretaria.html">Secretária</a></li>
+					</ul>
+				</li>
+				<li><a>Agenda</a>
+					<ul>
+						<li><a>Agendar Consultas</a></li>
+					</ul>
+				</li>
+				<li><a>Relatórios</a>
+					<ul>
+						<li><a>Consultar Agenda</a></li>
+						<li><a>Relatório Paciente</a></li>
+						<li><a>Pacientes atendidos</a></li>
+					</ul>
+				</li>
+				<li><a>Prontuário</a>
+					<ul>
+						<li><a>Prontuários</a></li>
+					</ul>
+				</li>
+				<li><a>Fechar</a></li>
 			</ul>
-		</li>
-		<li><a>Agenda</a>
-			<ul>
-				<li><a>Agendar Consultas</a></li>
-			</ul>
-		</li>
-		<li><a>Relatórios</a>
-			<ul>
-				<li><a>Consultar Agenda</a></li>
-				<li><a>Relatório Paciente</a></li>
-				<li><a>Pacientes atendidos</a></li>
-			</ul>
-		</li>
-		<li><a>Prontuário</a>
-			<ul>
-				<li><a>Prontuários</a></li>
-			</ul>
-		</li>
-		<li><a>Fechar</a></li>
-	</ul>
-	</nav>
-  <br>
-	<form>
-		<h2>Agendar consulta</h2>
-		<div class="dados">
-			<span class="atributo-form">Paciente</span> </br>
-        <select id="selectPaciente"></select>
-      </br></br>
-      <span class="atributo-form">Médicos</span> </br>
-        <select id="selectMedico"></select>
-      </br></br>
-      <span class="atributo-form">Tipo de consulta</span> </br>
-        <select id="selectConsulta"></select>
-      </br></br>
-		<div class="dados">
-			<h3>Dados Específicos</h3>
-			<span class="atributo-form">CRM:</span></br><input id="crm" class="input-dados" placeholder="CRM" type="text"/></br></br>
-			<span class="atributo-form">Especialização:</span></br><input id="especializacao" class="input-dados" placeholder="Especialização" type="text"/></br></br>
+		</nav>
+		<br>
+		<form>
+			<h2>Agendar consulta</h2>
+			<div class="dados">
+				<span class="atributo-form">Paciente</span> </br>
+				<select name="paciente" class="input-dados" id="inpPaciente"></select>
+				</br></br>
+				<span class="atributo-form">Médicos</span> </br>
+				<select name="medico" class="input-dados" id="inpMedico"></select>
+				</br></br>
+				<span class="atributo-form">Tipo de consulta</span> </br>
+				<select name="consulta" class="input-dados" id="inpConsulta"></select>
+				</br></br>
+				<span class="atributo-form">Data da consulta:</span> </br>
+				<input name="Data da Consulta" class="input-dados" type="date" id="inpDate">
+				</br></br>
+				<span class="atributo-form">Hora da consulta:</span> </br>
+				<input name="Hora da Consulta" class="input-dados" type="time" id="inpHour">
+				</br></br>
 		</div>
-
-		<div class="dados">
-			<h3>Dados de Acesso</h3>
-			<span class="atributo-form">Usuário:</span></br><input id="usuario" class="input-dados" placeholder="usuario" type="text"/></br></br>
-			<div>
-				<div style="float:left"><span class="atributo-form">Senha:</span></br><input id="senha"  class="input-dados" placeholder="senha" type="text"/></div>
-				<div style="float:left; margin-left: 40px"><span class="atributo-form">Confirme sua senha:</br></span><input id="confirmacao" class="input-dados" placeholder="confirme sua senha" type="text"/></br></br>
-			</div>
-		</div>
-		<br/><br/><br/><br/><br/>
-		<button>Salvar</button>
-		<button>Limpar</button>
-
+		<br/>
+		<button type="button" id="save">Salvar</button>
+		<button type="button" id="clean">Limpar</button>
 	</form>
-  <script src="../../js/seed.js"></script>
-  <script>
-    document.getElementById('selectPaciente').innerHTML =
-      getData().paciente.reduce(function(prev,next){
-        return prev += '<option>' + next.name +' '+  next.sobrenome + '</option>';
-      }, '');
-      document.getElementById('selectMedico').innerHTML =
-        getData().medico.reduce(function(prev,next){
-          return prev += '<option>' + next.name +' '+  next.sobrenome + ' [CRM: '+ next.crm + ']</option>';
-        }, '');
-        document.getElementById('selectConsulta').innerHTML =
-          getData().tipoconsulta.reduce(function(prev,next){
-            return prev += '<option>' +  next.valor + '[Duração:'+next.horario+']</option>';
-          }, '');
-  </script>
+	<script src="../../js/seed.js"></script>
+	<script src="../../js/agenda/agendarconsulta.js"></script>
 </body>
+</html>

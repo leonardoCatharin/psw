@@ -12,6 +12,7 @@
     alert(message);
   }
   function clean(){};
+
   function mountDOMHelpers(){
     document.getElementById('inpPaciente').innerHTML =
     getData().paciente.reduce(function(prev,next){

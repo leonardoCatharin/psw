@@ -101,6 +101,14 @@ nav li:hover li a:hover {
     border-radius: 5px;
     border: 1px solid #002e68;
 }
+.input-dados-area {
+    padding-left: 5px;
+    width: 745px;
+    height: 278px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #002e68;
+}
 
 .input-dados-senha {
     padding-left: 5px;

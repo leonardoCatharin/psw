@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Clínica</title>
+    <meta charset="UTF-8">
+    <title>Clínica</title>
 
-	<link rel="stylesheet" type="text/css" href="../../estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="../../estilo.css"/>
 </head>
 <body>
-	<header>
-		<img src="../../image/logo.png" height="100px">
-		<h1>PSW - CLÍNICA</h1>
-	</header>
-	<nav>
+<header>
+    <img src="../../image/logo.png" height="100px">
+
+    <h1>PSW - CLÍNICA</h1>
+</header>
+<!-- Menu-->
+<nav>
     <ul id="drop-menu">
         <li class="img-home"><a href="../../home.html"><img class="img-home" src="../../icon/home.png">
         <li><a>Cadastros</a>
@@ -43,31 +45,38 @@
         <li><a>Sair</a></li>
     </ul>
     </nav>
-		<br>
-		<form>
-			<h2>Agendar consulta</h2>
-			<div class="dados">
-				<span class="atributo-form">Paciente</span> </br>
-				<select name="Paciente" class="input-dados" id="inpPaciente"></select>
-				</br></br>
-				<span class="atributo-form">Médicos</span> </br>
-				<select name="Medico" class="input-dados" id="inpMedico"></select>
-				</br></br>
-				<span class="atributo-form">Tipo de consulta</span> </br>
-				<select name="Consulta" class="input-dados" id="inpConsulta"></select>
-				</br></br>
-				<span class="atributo-form">Data da consulta:</span> </br>
-				<input name="Data da Consulta" class="input-dados" type="date" id="inpDate">
-				</br></br>
-				<span class="atributo-form">Hora da consulta:</span> </br>
-				<input name="Hora da Consulta" class="input-dados" type="time" id="inpHour">
-				</br></br>
-		</div>
-		<br/>
-		<button type="button" id="save">Salvar</button>
-		<button type="button" id="clean">Limpar</button>
-	</form>
-	<script src="../../js/seed.js"></script>
-	<script src="../../js/agenda/agendarconsulta.js"></script>
+</nav>
+    <h2>Atestado</h2>
+
+    <div class="dados">
+
+        <br/>
+        <span class="atributo-form">Paciente</span>
+        <br/>
+        <input name="paciente" class="input-dados" type="text"/>
+        <button type="button">Pesquisar</button>
+        <br/>
+        <br/>
+
+
+        <span class="atributo-form">Data de Início</span>
+        <br/>
+        <input name="data" class="input-dados" type="date"/>
+        <br/>
+        <br/>
+
+        <span class="atributo-form">Quantidade de Dias</span>
+        <br/>
+        <input name="quantidade" type="number" class="input-dados"/>
+
+
+        <br/>
+        <br/>
+        <span class="atributo-form">Descrição</span>
+        <br/>
+        <textarea name="descricao" class="input-dados-area"></textarea>
+        <br/>
+        <button type="button">Imprimir</button>
+    </div>
 </body>
 </html>

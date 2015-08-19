@@ -11,11 +11,13 @@
     message = !!message ? function(){} : "Registro salvo com sucesso!";
     alert(message);
   }
+  
   function clean(){
     [].forEach.call(fields,function(item){
       item.value = '';
     })
   };
+
   function mountDOMHelpers(){
     document.getElementById('inpPaciente').innerHTML =
     getData().paciente.reduce(function(prev,next){

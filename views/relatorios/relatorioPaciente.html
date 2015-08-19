@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica</title>
+
+    <link rel="stylesheet" type="text/css" href="../../estilo.css"/>
+</head>
+<body>
+<header>
+    <img src="../../image/logo.png" height="100px">
+
+    <h1>PSW - CLÍNICA</h1>
+</header>
+<!-- Menu-->
+<nav>
+    <ul id="drop-menu">
+        <li class="img-home"><a href="../../home.html"><img class="img-home" src="../../icon/home.png">
+        <li><a>Cadastros</a>
+            <ul>
+                <li><a href="../crud/paciente.html">Paciente</a></li>
+                <li><a href="../crud/medico.html">Médico</a></li>
+                <li><a href="../crud/secretaria.html">Secretária</a></li>
+            </ul>
+        </li>
+        <li><a>Agenda</a>
+            <ul>
+                <li><a href="../agenda/agendarconsulta.html">Agendar Consultas</a></li>
+            </ul>
+        </li>
+        <li><a>Relatórios</a>
+            <ul>
+                <li><a href="../relatorios/relatorioConsulta.html">Consultar Agenda</a></li>
+                <li><a href="../relatorios/relatorioAtestado.html">Atestado</a></li>
+                <li><a href="../relatorios/relatorioDeclaracao.html">Declaração</a></li>
+                <li><a href="../relatorios/relatorioReceita.html">Receita</a></li>
+                <li><a href="../relatorios/relatorioPaciente.html">Pacientes atendidos</a></li>
+            </ul>
+        </li>
+        <li><a>Prontuário</a>
+            <ul>
+                <li><a href="../prontuario/prontuario.html">Prontuários</a></li>
+            </ul>
+        </li>
+        <li><a>Sair</a></li>
+    </ul>
+</nav>
+<h2>Pacientes Atendidos</h2>
+
+<div class="dados">
+    <span class="atributo-form">Data</span>
+    </br>
+    <select class="input-dados" name="mes">
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Deszmbro</option>
+    </select>
+    <button type="button">Pesquisar</button>
+    </br></br>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rafael</td>
+                <td>Rua Anchieta, 1084</td>
+                <td>44 32748284</td>
+                <td>44 99999999</td>
+                <td>rbmangolin@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

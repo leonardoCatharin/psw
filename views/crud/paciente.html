@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -50,11 +50,11 @@
 			<h3>Dados Pessoais</h3>
 			<span class="atributo-form">Nome:</span> </br><input class="input-dados" id="nome" name="Nome" placeholder="Nome" type="text"/></br></br>
 			<span class="atributo-form">Sobrenome:</span> </br><input class="input-dados" id="sobrenome" name="Sobrenome" placeholder="Sobrenome" type="text"/></br></br>
-			<span class="atributo-form">Data de nascimento:</span></br><input class="input-dados" id="data" name="Data de Nascimento" type="date"/></br></br>
+			<span class="atributo-form">Data de nascimento:</span></br><input class="input-dados" id="data" name="Nascimento" type="date"/></br></br>
 			<span class="atributo-form">Endereço:</span></br><input class="input-dados" id="endereco" name="Endereço" placeholder="Endereço" type="text"/></br></br>
 			<div>
-				<div style="float:left"><span class="atributo-form">Telefone fixo: </span></br><input class="input-dados" name="Telefone Fixo" id="fonefixo" placeholder="(99) 9999-9999" type="text"/></div>
-				<div style="float:left; margin-left: 40px"><span class="atributo-form">Telefone celular: </br></span><input class="input-dados" name="Telefone Celular" id="fonecelular" placeholder="(99) 9999-9999" type="text"/></br></br>
+				<div style="float:left"><span class="atributo-form">Telefone fixo: </span></br><input class="input-dados" name="TelFixo" id="fonefixo" placeholder="(99) 9999-9999" type="text"/></div>
+				<div style="float:left; margin-left: 40px"><span class="atributo-form">Telefone celular: </br></span><input class="input-dados" name="TelCelular" id="fonecelular" placeholder="(99) 9999-9999" type="text"/></br></br>
 			</div>
 			<br/><br/><br/><br/><br/>
 			<span class="atributo-form">Email:</span></br><input class="input-dados" name="Email" id="email" placeholder="Email" type="email"/></br></br>
@@ -66,18 +66,18 @@
 		<br/><br/><br/><br/><br/>
 		<div class="dados">
 			<h3>Dados Adicionais</h3>
-			<span class="atributo-form">Alergia (s):</span></br><textarea id="alergia"  class="area-texto" type="textarea"></textarea>	</br></br>
+			<span class="atributo-form">Alergia (s):</span></br><textarea id="alergia" class="area-texto" type="textarea"></textarea>	</br></br>
 			<span class="atributo-form">Já realizou cirurgia(as)? Quais?</span></br><textarea class="area-texto" id="cirurgia"></textarea></br></br>
 		</div>
 
-		<input class="dados-adicionais-check" type="checkbox"/ id="fuma" value="fuma"><span class="text-checkbox">Fuma</span>
-		<input class="dados-adicionais-check" type="checkbox"/  id="alcool" value="alcool"><span class="text-checkbox">Problemas com bebidas alcólicas</span>
-		<input class="dados-adicionais-check" type="checkbox"/  id="diabetes" value="diabetes"><span class="text-checkbox">Diabetes</span>
-		<input class="dados-adicionais-check" type="checkbox"/  id="colesterol" value="colesterol"><span class="text-checkbox">Colesterol</span>
-		<input class="dados-adicionais-check" type="checkbox"/  id="cardio" value="cardio"><span class="text-checkbox">Doenças cardíacas</span>
+		<input class="dados-adicionais-check" type="checkbox"  id="fuma" value="y"/><span class="text-checkbox">Fuma</span>
+		<input class="dados-adicionais-check" type="checkbox"  id="alcool" value="y"/><span class="text-checkbox">Problemas com bebidas alcólicas</span>
+		<input class="dados-adicionais-check" type="checkbox"  id="diabetes" value="y"/><span class="text-checkbox">Diabetes</span>
+		<input class="dados-adicionais-check" type="checkbox"  id="colesterol" value="y"/><span class="text-checkbox">Colesterol</span>
+		<input class="dados-adicionais-check" type="checkbox"  id="cardio" value="y"/><span class="text-checkbox">Doenças cardíacas</span>
 
 		<br/><br/><br/><br/><br/>
-		<button>Prontuários</button>
+		<button id="prontuario" type="button">Prontuários</button>
 		<button id="save" type="button">Salvar</button>
 		<button id="clean" type="button">Limpar</button>
 	<script src="../../js/crud/paciente.js"></script>

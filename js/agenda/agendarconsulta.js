@@ -1,6 +1,7 @@
 (function(){
   'use strict';
   var fields = document.querySelectorAll('[id^="inp"]');
+  
   function save(){
     var message =
     [].filter.call(fields,function(item){
@@ -11,7 +12,7 @@
     message = !!message ? function(){} : "Registro salvo com sucesso!";
     alert(message);
   }
-  
+
   function clean(){
     [].forEach.call(fields,function(item){
       item.value = '';
@@ -31,6 +32,7 @@
     getData().tipoconsulta.reduce(function(prev,next){
       return prev += '<option>' +  next.valor + '[Duração:'+next.horario+']</option>';
     }, '');
+
     document.getElementById('save').onclick = save;
     document.getElementById('clean').onclick = clean;
   }

@@ -22,7 +22,7 @@
     function save() {
         var message =
             Object.keys(formFields).reduce(function (prev, next) {
-                if (formFields[next].type != 'checkbox' &&
+                if(formFields[next].type != 'checkbox' &&
                     formFields[next].className != "area-texto" &&
                     formFields[next].value == '' &&
                     formFields[next].id.indexOf('inp') > -1) {
@@ -40,9 +40,7 @@
         if (message.length == 0
             || (formFields['senha'].value != ''
             && formFields['senha'].value == formFields['confirmacao'].value)) {
-            location.pathname = 'home.html'
-            console.log('123')
+            location.pathname = 'home.html';
         }
-
     }
 })();

@@ -50,43 +50,39 @@
 <div class="dados">
     <span class="atributo-form">Data</span>
     </br>
-    <select class="input-dados" name="mes">
-        <option value="1">Janeiro</option>
-        <option value="2">Fevereiro</option>
-        <option value="3">Março</option>
-        <option value="4">Abril</option>
-        <option value="5">Maio</option>
-        <option value="6">Junho</option>
-        <option value="7">Julho</option>
-        <option value="8">Agosto</option>
-        <option value="9">Setembro</option>
+    <select id="data" class="input-dados" name="mes">
+        <option value="01" selected>Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
         <option value="10">Outubro</option>
         <option value="11">Novembro</option>
-        <option value="12">Deszmbro</option>
+        <option value="12">Dezembro</option>
     </select>
-    <button type="button">Pesquisar</button>
+    <button id="buscar" type="button">Pesquisar</button>
     </br></br>
+
 
     <table class="table">
         <thead>
         <tr>
-            <th>Nome</th>
-            <th>Endereço</th>
-            <th>Telefone</th>
-            <th>Celular</th>
-            <th>Email</th>
+            <th>Médico</th>
+            <th>Paciente</th>
+            <th>Data</th>
+            <th>Tipo de consulta</th>
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Rafael</td>
-                <td>Rua Anchieta, 1084</td>
-                <td>44 32748284</td>
-                <td>44 99999999</td>
-                <td>rbmangolin@gmail.com</td>
-            </tr>
+
         </tbody>
     </table>
 </div>
+<script src="../../js/seed.js"></script>
+<script src="../../js/relatorios/relatorioPaciente.js"></script>
 </body>
 </html>

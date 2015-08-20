@@ -16,67 +16,70 @@
 <nav>
     <ul id="drop-menu">
         <li class="img-home"><a href="../../home.html"><img class="img-home" src="../../icon/home.png">
-        <li><a>Cadastros</a>
-            <ul>
-                <li><a href="../crud/paciente.html">Paciente</a></li>
-                <li><a href="../crud/medico.html">Médico</a></li>
-                <li><a href="../crud/secretaria.html">Secretária</a></li>
-            </ul>
-        </li>
-        <li><a>Agenda</a>
-            <ul>
-                <li><a href="../agenda/agendarconsulta.html">Agendar Consultas</a></li>
-            </ul>
-        </li>
-        <li><a>Relatórios</a>
-            <ul>
-                <li><a href="../relatorios/relatorioConsulta.html">Consultar Agenda</a></li>
-                <li><a href="../relatorios/relatorioAtestado.html">Atestado</a></li>
-                <li><a href="../relatorios/relatorioDeclaracao.html">Declaração</a></li>
-                <li><a href="../relatorios/relatorioReceita.html">Receita</a></li>
-                <li><a href="../relatorios/relatorioPaciente.html">Pacientes atendidos</a></li>
-            </ul>
-        </li>
-        <li><a>Prontuário</a>
-            <ul>
-                <li><a href="../prontuario/prontuario.html">Prontuários</a></li>
-            </ul>
-        </li>
-        <li><a>Sair</a></li>
+            <li><a>Cadastros</a>
+                <ul>
+                    <li><a href="../crud/paciente.html">Paciente</a></li>
+                    <li><a href="../crud/medico.html">Médico</a></li>
+                    <li><a href="../crud/secretaria.html">Secretária</a></li>
+                </ul>
+            </li>
+            <li><a>Agenda</a>
+                <ul>
+                    <li><a href="../agenda/agendarconsulta.html">Agendar Consultas</a></li>
+                </ul>
+            </li>
+            <li><a>Relatórios</a>
+                <ul>
+                    <li><a href="../relatorios/relatorioConsulta.html">Consultar Agenda</a></li>
+                    <li><a href="../relatorios/relatorioAtestado.html">Atestado</a></li>
+                    <li><a href="../relatorios/relatorioDeclaracao.html">Declaração</a></li>
+                    <li><a href="../relatorios/relatorioReceita.html">Receita</a></li>
+                    <li><a href="../relatorios/relatorioPaciente.html">Pacientes atendidos</a></li>
+                </ul>
+            </li>
+            <li><a>Prontuário</a>
+                <ul>
+                    <li><a href="../prontuario/prontuario.html">Prontuários</a></li>
+                </ul>
+            </li>
+            <li><a>Sair</a></li>
     </ul>
-    </nav>
 </nav>
-    <h2>Atestado</h2>
+</nav>
+<h2>Atestado</h2>
 
-    <div class="dados">
+<div class="dados">
 
-        <br/>
-        <span class="atributo-form">Paciente</span>
-        <br/>
-        <input name="paciente" class="input-dados" type="text"/>
-        <button type="button">Pesquisar</button>
-        <br/>
-        <br/>
-
-
-        <span class="atributo-form">Data de Início</span>
-        <br/>
-        <input name="data" class="input-dados" type="date"/>
-        <br/>
-        <br/>
-
-        <span class="atributo-form">Quantidade de Dias</span>
-        <br/>
-        <input name="quantidade" type="number" class="input-dados"/>
+    <br/>
+    <span class="atributo-form">Paciente</span>
+    <br/>
+    <input id="inpBusca" name="paciente" class="input-dados" type="text"/>
+    <button id="buscar" type="button">Pesquisar</button>
+    <br/>
+    <br/>
 
 
-        <br/>
-        <br/>
-        <span class="atributo-form">Descrição</span>
-        <br/>
-        <textarea name="descricao" class="input-dados-area"></textarea>
-        <br/>
-        <button type="button">Imprimir</button>
-    </div>
+    <span class="atributo-form">Data de Início</span>
+    <br/>
+    <input id="inpData" name="data" class="input-dados" type="date"/>
+    <br/>
+    <br/>
+
+    <span class="atributo-form">Quantidade de Dias</span>
+    <br/>
+    <input id="inpDia" name="quantidade" type="number" class="input-dados"/>
+
+
+    <br/>
+    <br/>
+    <span class="atributo-form">Descrição</span>
+    <br/>
+    <textarea id="inpDescricao" name="descricao" class="input-dados-area"></textarea>
+    <br/>
+    <button id="imprimir" type="button">Imprimir</button>
+</div>
+<script src="../../js/seed.js"></script>
+
+<script src="../../js/relatorios/relatorioAtestado.js"></script>
 </body>
 </html>

@@ -11,16 +11,18 @@
   },'')
 
   function save(){
+    var message = 'É necessário um diagnóstico para gerar um prontuário';
     if(!!diagnostico.value){
       [].forEach.call(formFields,function(item){
         newProntuario[item.name.toLowerCase()] = item.value;
       })
+      message = ('Paciente salvo com sucesso!');
     }
-    alert('Paciente salvo com sucesso!');
+    alert(message)
   }
   function clean(){
     [].forEach.call(formFields,function(item){
-      item.value = "";  
+      item.value = "";
     })
   }
 

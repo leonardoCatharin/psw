@@ -1,12 +1,31 @@
 (function () {
-  var formFields = {}
-  ,   isCpfValid = new RegExp("^d{3}.d{3}.d{3}-d{2}$")
-  ,   isPhoneValid = new RegExp("/^(\(11\) [9][0-9]{4}-[0-9]{4})|(\(1[2-9]\) [5-9][0-9]{3}-[0-9]{4})|(\([2-9][1-9]\) [5-9][0-9]{3}-[0-9]{4})$");
-
+  var formFields = {},
+      newPaciente = {};
   document.getElementById('save').onclick = save;
+  document.getElementById('clean').onclick = clear;
+  document.getElementById('prontuario').onclick = prontuario;
   [].forEach.call(document.querySelectorAll('input'),function(item){
     formFields[item.id] = item;
   });
+  function isAdicionalAndCheckbox(key){
+    return (
+       key == "fuma"
+    || key == "alcool"
+    || key == "diabetes"
+    || key == "colesterol"
+    || key == "cardio")
+  }
+
+  function prontuario(){
+    location.href = "/views/prontuario/prontuario.html";
+  }
+  
+  function clear(){
+    Object.keys(formFields).forEach(function(item){
+      formFields[item].value = '';
+    })
+  }
+
   function save(){
     var message =
     Object.keys(formFields).reduce(function(prev,next){
@@ -17,10 +36,26 @@
       }
       return prev +="";
     },'')
-    !formFields['email'].checkValidity()  ? function(){} : (message += "O campo de email está no formato errado!\n");
-    isCpfValid.test(formFields['cpf'].value) ? function(){} : (message += "O campo de CPF não está no formato errado!\n");
-    isPhoneValid.test(formFields['fonefixo'].value) ? function(){} : (message += "O campo de Telefone Fixo não está no formato errado!\n");
-    isPhoneValid.test(formFields['fonecelular'].value) ? function(){} : (message += "O campo de Telefone Celular não está no formato errado!\n");
+
+    formFields['email'].checkValidity()  ? function(){} : (message += "O campo de email está no formato errado!\n");
+    if(!message){
+      message += "O registro foi salvo com sucesso!";
+      newPaciente.adicionais = {};
+
+      Object.keys(formFields).forEach(function(item){
+        if(isAdicionalAndCheckbox(item)){
+          newPaciente.adicionais[item] = (formFields[item].checked);
+        } else {
+          newPaciente[item] = formFields[item].value;
+        }
+      })
+      if(document.getElementById('alergia').value)
+        newPaciente.adicionais.alergias = document.getElementById('alergia').value;
+      if(document.getElementById('cirurgia').value)
+        newPaciente.adicionais.cirurgia = document.getElementById('cirurgia').value;
+      }
     alert(message);
+    // console.log(newPaciente) -> Exibe o paciente;
+    clear();
   }
 })();

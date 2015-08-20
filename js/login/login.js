@@ -8,7 +8,7 @@
     var senha = document.getElementById('senha').value;
 
     if(!getData().checkLogin(nome,senha)){
-      alert ("Usuário inexistente");
+      alert ("Informações incorretas");
     }
     else{
       location.pathname = '/home.html';

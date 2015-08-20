@@ -19,6 +19,7 @@
   function prontuario(){
     location.href = "/views/prontuario/prontuario.html";
   }
+  
   function clear(){
     Object.keys(formFields).forEach(function(item){
       formFields[item].value = '';

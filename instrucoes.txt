@@ -1,0 +1,3 @@
+Para fazer o login no sistema, deve-se consultar no arquivo "js/seed.js" qual usuário deseja-se logar.
+Somente os médicos e as secretárias podem fazer login no sistema.
+O sistema foi desenvolvido para rodar em qualquer servidor estático.

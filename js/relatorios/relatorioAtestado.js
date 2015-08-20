@@ -1,6 +1,6 @@
 (function () {
     var formFields = {};
-    
+
     var dados = getData()
         , paciente;
 
@@ -11,8 +11,6 @@
     [].forEach.call(document.querySelectorAll("[id^='inp']"), function (item) {
         formFields[item.id] = item;
     });
-
-    console.log(formFields)
 
     function imprimir() {
         var message =

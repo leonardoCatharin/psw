@@ -27,7 +27,6 @@
          formFields[next].className != "area-texto" &&
          formFields[next].value == '' &&
       formFields[next].id.indexOf('inp') > -1){
-        console.log(formFields[next].name,formFields[next].id.indexOf('inp'))
         return prev += "O campo " + formFields[next].name + " está vazio!\n";
       }
       return prev +="";

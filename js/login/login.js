@@ -4,14 +4,14 @@
 
 
   function validation(){
-    var nome = document.getElementById('nome').value;   
+    var nome = document.getElementById('nome').value;
     var senha = document.getElementById('senha').value;
 
     if(!getData().checkLogin(nome,senha)){
       alert ("Usuário inexistente");
     }
     else{
-      alert ("Entrou!");
+      location.pathname = '/home.html';
     }
   }
 

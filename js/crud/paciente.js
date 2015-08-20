@@ -19,7 +19,7 @@
   function prontuario(){
     location.href = "/views/prontuario/prontuario.html";
   }
-  
+
   function clear(){
     Object.keys(formFields).forEach(function(item){
       formFields[item].value = '';
@@ -55,7 +55,6 @@
         newPaciente.adicionais.cirurgia = document.getElementById('cirurgia').value;
       }
     alert(message);
-    // console.log(newPaciente) -> Exibe o paciente;
     clear();
   }
 })();

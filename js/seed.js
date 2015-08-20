@@ -15,10 +15,10 @@ function getData(){
     ],
     'secretaria': [
       {id: 0, name: 'Joana', sobrenome:'White', telefone: '44 97636382',login: 'joanawhite',senha:'123'},
-      {id: 1, name: 'Juliana', sobrenome:'Rafaela', telefone: '47 82729272',login: 'jurafael',senha:'123'},
+      {id: 1, name: 'Man', sobrenome:'Golin', telefone: '47 82729272',login: 'mangolin',senha:'123'},
       {id: 2, name: 'Julia', sobrenome:'Juliana', telefone: '44 1232333',login: 'qwe',senha:'123'},
       {id: 3, name: 'Rafaela', sobrenome:'Hakaraka', telefone: '44 123333',login: 'qwe',senha:'123'},
-      {id: 4, name: 'Marcela', sobrenome:'Loku', telefone: '420 12312321',login: 'qwe',senha:'123'}
+      {id: 4, name: 'Bia', sobrenome:'Zus', telefone: '420 12312321',login: 'qwe',senha:'123'}
     ],
     'consulta': [
       {medico: 'Alexandre',paciente: 'João', hora: '14:30', data: '16/09/2015',tipo:'Primeira Consulta'},
@@ -34,6 +34,12 @@ function getData(){
       return this.medico.filter(function(item){
         return name == item.name;
       })
+    },
+    checkLogin: function (login,senha){
+      return this.medico.concat(this.secretaria).filter(function(item){
+        return item.login == login && item.senha==senha;
+      }).length>0
+
     }
   }
 }

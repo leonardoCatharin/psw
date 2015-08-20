@@ -6,9 +6,6 @@
   document.getElementById('save').onclick = save;
   document.getElementById('clear').onclick = clear;
 
-  function save(){
-    var document.getElementById('nome').value
-  }
   [].forEach.call(document.querySelectorAll('input'),function(item){
     formFields[item.id] = item;
   });
@@ -35,7 +32,7 @@
       }
       return prev +="";
     },'')
-    !formFields['email'].checkValidity()  ? function(){} : (message += "O campo de email está no formato errado!\n");
+    !
     isCpfValid.test(formFields['inpCpf'].value) ? function(){} : (message += "O campo de CPF não está no formato errado!\n");
     isPhoneValid.test(formFields['fonefixo'].value) ? function(){} : (message += "O campo de Telefone Fixo não está no formato errado!\n");
     isPhoneValid.test(formFields['fonecelular'].value) ? function(){} : (message += "O campo de Telefone Celular não está no formato errado!\n");
